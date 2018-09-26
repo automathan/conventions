@@ -1,6 +1,7 @@
-# Conventions
+# Conventions 
 
-[🇳🇴](##Norsk) [🇬🇧](##English)
+[🇳🇴](#norsk) [🇬🇧](#english)
+
 
 ## Norsk
 Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfor bør de ansees som gjeldende dersom ikke annet er spesifisert.
