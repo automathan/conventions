@@ -13,7 +13,7 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 - Ikke bruk forkortelser i navn på klasser og funksjoner. _Typiske unntak: RSA, gcd_
 - Følg programmeringsspråkets standard for forbokstavs-konvensjoner for klasser, funksjoner og variabler med forskjellige tilgangsmodifikatorer.
 - Dersom et konsept har flere annerkjente navn, velg ett og hold deg til det.
-- Ikke bland inn informasjon om en funksjons utviklingstilstand i navnet. _Eksempel: funksjonA_temp, WIPKlasseBv2_
+- Ikke bland inn informasjon om en funksjons utviklingstilstand i navnet. _Eksempel: funksjonA\_temp, WIPKlasseBv2_
 - Ved sammensatte navn, være konsistent i rekkefølgen på beskrivende ord. _Eksempel: ikke ha både QuickSort og SearchBinary, men heller QuickSort og BinarySearch_
 - Prøv å unngå veldig lange og sære navn. Hvis du ikke kommer unna kan det være et tegn på at prosjektet har et designproblem.
 - La filtypene tale for seg. _Eksempel: script.py istedet for python_script.py_
@@ -23,7 +23,6 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 - Konstanter burde deklareres som konstanter, med riktig navngivning og passende skop. Unntak er spesielle tall som _0, 1, 2, -1, 0xff_ og liknende (i riktig kontekst, vel å merke).
 - Følg DRY-prinsippet (Don't Repeat Yourself). Dersom du føler at du skriver noe som er tilnærmet identisk til noe du har skrevet før, vurder å lage f.eks. en _utility_-funksjon som gjør det. Dette reduserer selvfølgelig antall linjer, men hovedfordelen er heller at når man ikke trenger å skrive koden på nytt, så kan man heller ikke gjøre dumme slurvefeil.
 - Maks linjelengde er 100 tegn.
-- Bruk spaces - ikke tabs.
 - Følg programmeringsspråkets konvensjon for indentering.
 
 ### Kommentering
@@ -63,7 +62,7 @@ Note that these are just guidelines, which means that there are always exception
 - Do not use abbreviations in class and function names. _Some valid exceptions: RSA, gcd_
 - Follow the capitalization conventions specified by the programming language standard for classes, functions and variables with different access level modifiers.
 - If a concept has several accepted names, choose one and stick to it.
-- Names should not contain any traces of development information. _Example: functionA_temp, WIPClassBv2_
+- Names should not contain any traces of development information. _Example: functionA\_temp, WIPClassBv2_
 - In the case of multi-word names, make sure the ordering of descriptive words is consistent through the project. _Example: avoid having QuickSort and SearchBinary when you can have QuickSort and BinarySearch_
 - Try your best to avoid long and weird names. If you cannot get around this, you might want to reconsider the overall design of your program.
 - Let the file extensions do their job. _Example: use script.py instead of python_script.py_
@@ -73,7 +72,6 @@ Note that these are just guidelines, which means that there are always exception
 - Constants should be declared as constants, with a proper name and scope. Exceptions are special numbers such as _0, 1, 2, -1, 0xff_ (given the right context).
 - Respect the DRY-principle (Don't Repeat Yourself). If you feel that you are repeating yourself, consider making a _utility_ function that you can replace all occurences of similar code segments with. While reducing the overall line count, the main advantage is that you reduce the possibility for error.
 - Maximum linewidth is 100 characters.
-- Use spaces, not tabs.
 - Follow the indentation conventions specified by the given programming language.
 
 ### Commenting
