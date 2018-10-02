@@ -22,8 +22,9 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 ### Kode
 - Konstanter burde deklareres som konstanter, med riktig navngivning og passende skop. Unntak er spesielle tall som _0, 1, 2, -1, 0xff_ og liknende (i riktig kontekst, vel å merke).
 - Følg DRY-prinsippet (Don't Repeat Yourself). Dersom du føler at du skriver noe som er tilnærmet identisk til noe du har skrevet før, vurder å lage f.eks. en _utility_-funksjon som gjør det. Dette reduserer selvfølgelig antall linjer, men hovedfordelen er heller at når man ikke trenger å skrive koden på nytt, så kan man heller ikke gjøre dumme slurvefeil.
-- Maks linjelengde er 100 tegn.
+- Maks linjebredde er 100 tegn.
 - Følg programmeringsspråkets konvensjon for indentering.
+- Prøv å få riktig mengde "luft" i koden, altså tomme linjer. _Eksempel: Hopp over nøyaktig ẽn linje etter en funksjonskropp før en ny funksjon er definert eller deklarert.
 
 ### Kommentering
 - Forklar koden, ikke forklar programmering. Anta at leseren har en grunnleggende forståelse av språket.
@@ -35,9 +36,14 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 - Prøv å være generell hvis mulig, ikke anta at leseren kjenner til resten av prosjektet inn og ut. Dersom du referer til andre særegne komponenter i prosjektet, sørg for at også disse er grundig kommentert og dokumentert, slik at leseren alltids har muligheten til å forstå det helhetlige bildet.
 
 ### Tester
+- Gjør deg kjent med de forskjellige nivåene/typene testing, og anvend de som virker hensiktsmessige for prosjektet.
 - Navn på tester burde følge et konsistent format som gjør det klart hvilken funksjonalitet som testes.
-- Enhetstester burde begrenses til å teste spesifikk funksjonalitet, og burde ikke
-  inneholde logikk.
+- Enhetstester burde begrenses til å teste spesifikk funksjonalitet, og burde ikke inneholde logikk.
+- Husk at en test ikke bare tester en funksjon der og da, men også om funksjonen holder vann også etter endringer i systemer.
+- Kjør de mest grunnleggende testene først, slik at årsaken for en feil ikke må graves ut av en kompleks test.
+- Bruk etablerte test-rammeverk. Disse tilbyr typisk gruppering av tester, grafiske rapporter osv.
+- Del testene inn i (minst) to grupper, én liten en for kjapp testing imens du programmerer og én større en som kjøres på nye commits (ved bruk av CI).
+- Dersom systemet påvirker en eller annen ekstern tilstand, f.eks. en database eller et stykke dedikert hardware, sørg for at testene resetter denne tilstanden før de avsluttes. Bruk mock-objekter eller emulatorer hvis det er tilgjengelig.
 
 ### Git
 - Ikke commit utkommentert kode, med mindre du vet at det helt sikkert kommer til å bli avkommentert til en senere tid.
@@ -50,6 +56,7 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
   commit-meldingen. Eksempel: "Add tests for DateTime time-zone conversion".
 - All kode skal gå gjennom _code-review_ før det blir merget. Følg konvensjonen om
   pull-requests.
+- Bruk [feature branching](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
 
 ## English
 This list is compiled for use at Cogito NTNU, feel free to contribute if you have any corrections or additions in mind.
@@ -71,8 +78,9 @@ Note that these are just guidelines, which means that there are always exception
 ### Code
 - Constants should be declared as constants, with a proper name and scope. Exceptions are special numbers such as _0, 1, 2, -1, 0xff_ (given the right context).
 - Respect the DRY-principle (Don't Repeat Yourself). If you feel that you are repeating yourself, consider making a _utility_ function that you can replace all occurences of similar code segments with. While reducing the overall line count, the main advantage is that you reduce the possibility for error.
-- Maximum linewidth is 100 characters.
+- Maximum line width is 100 characters.
 - Follow the indentation conventions specified by the given programming language.
+- Try to maintain a moderate amount of "air" in the code, as in empty lines. _Example: Skip exactly one line after a function body before a new function is declared or defined.
 
 ### Commenting
 - Explain the code, not programming in itself. Assume that the reader has a general familiarity with the language.
@@ -84,10 +92,14 @@ Note that these are just guidelines, which means that there are always exception
 - If possible, try to be general in your comments, do not assume that the reader knows every detail about the rest of the project. Should you refer to other distinctive components in the project, make sure those are also properly commented and documented so that the reader is allowed the insight they need to proceed.
 
 ### Tests
-- Unit tests shold follow a consistent naming conventions which easily communicates
-  its purpose.
-- Unit tests should be restricted to test specific functionality, and should not
-  contain logic.
+- Familiarize yourself with the different levels/types of testing and apply those that seem appropriate for the project.
+- Unit tests shold follow a consistent naming conventions which easily communicates its purpose.
+- Unit tests should be restricted to test specific functionality, and should not contain logic.
+- Keep in mind that a test is not just a validation of a function in itself, but it is also an indicator that the function is still working after changes have been made elsewhere in the project.
+- Run the most fundamental tests first, this way you won't have to unpack a complex test to find the cause.
+- Do use established test frameworks. These should supply test grouping and graphical reports, among other things.
+- Divide the tests into (at least) two groups, one smaller set to use while programming, as well as a larger one that is run for each commit (through a CI system).
+- If the system alters some external state, such as a database or a piece of dedicated hardware, make sure that the state is reset before the testing session is closed. Use mock objects or emulators if available.
 
 ### Git
 - Do not commit code that is commented out, unless you know for sure that it will be uncommented at some point in the future.
@@ -98,3 +110,4 @@ Note that these are just guidelines, which means that there are always exception
   your commit message subject. Example: "Add tests for DateTime time-zone conversion".
 - All code should pass _code-review_ before merging. Follow the conventions
   for pull-requests.
+- Follow the [feature branching](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) workflow.
