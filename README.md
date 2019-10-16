@@ -11,7 +11,7 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 - Klasser skal ha et beskrivende navn i ubestemt entall.
 - Klasser navngis med substantiv, funksjoner med verb.
 - Ikke bruk forkortelser i navn på klasser og funksjoner. _Typiske unntak: RSA, gcd_
-- Følg programmeringsspråkets standard for forbokstavs-konvensjoner for klasser, funksjoner og variabler med forskjellige tilgangsmodifikatorer.
+- Følg programmeringsspråkets standard for casing-konvensjoner for klasser, funksjoner og variabler med forskjellige tilgangsmodifikatorer.
 - Dersom et konsept har flere annerkjente navn, velg ett og hold deg til det.
 - Ikke bland inn informasjon om en funksjons utviklingstilstand i navnet. _Eksempel: funksjonA\_temp, WIPKlasseBv2_
 - Ved sammensatte navn, være konsistent i rekkefølgen på beskrivende ord. _Eksempel: ikke ha både QuickSort og SearchBinary, men heller QuickSort og BinarySearch_
@@ -24,7 +24,7 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 - Følg DRY-prinsippet (Don't Repeat Yourself). Dersom du føler at du skriver noe som er tilnærmet identisk til noe du har skrevet før, vurder å lage f.eks. en _utility_-funksjon som gjør det. Dette reduserer selvfølgelig antall linjer, men hovedfordelen er heller at når man ikke trenger å skrive koden på nytt, så kan man heller ikke gjøre dumme slurvefeil.
 - Maks linjebredde er 100 tegn.
 - Følg programmeringsspråkets konvensjon for indentering.
-- Prøv å få riktig mengde "luft" i koden, altså tomme linjer. _Eksempel: Hopp over nøyaktig ẽn linje etter en funksjonskropp før en ny funksjon er definert eller deklarert.
+- Prøv å få riktig mengde "luft" i koden, altså tomme linjer. _Eksempel: Hopp over nøyaktig ẽn linje etter en funksjonskropp før en ny funksjon er definert eller deklarert._
 
 ### Kommentering
 - Forklar koden, ikke forklar programmering. Anta at leseren har en grunnleggende forståelse av språket.
@@ -47,11 +47,8 @@ _Merk at dette er retningslinjer, og med det så finnes det alltid unntak. Derfo
 
 ### Git
 - Ikke commit utkommentert kode, med mindre du vet at det helt sikkert kommer til å bli avkommentert til en senere tid.
-- Prøv å unngå at flere én commit inneholder løsningen på mange helt forskjellige problemer, eller en samling nye funsksjoner uten noen sterk sammenheng.
+- Prøv å unngå at én commit inneholder løsningen på flere helt forskjellige problemer, eller en samling nye funksjoner uten noen sterk sammenheng.
 - Skriv commit-meldinger. Ikke skriv dagbok, skriv heller ikke _shit3fixedfinal_, med mindre det beskriver presist hva du har gjort.
-- Commit message subjects should be written in the imperative mood.
-  A trick for writing commit subjects are "If this commit is applied, it will X", where X is
-  your commit message subject. Example: "Add tests for DateTime time-zone conversion".
 - Commit-meldinger bør skrives i imperativ modus, og på engelsk. Et triks for å skrive commit-meldinger er å skrive i formatet "If this commit is applied, it will X", der X er
   commit-meldingen. Eksempel: "Add tests for DateTime time-zone conversion".
 - All kode skal gå gjennom _code-review_ før det blir merget. Følg konvensjonen om
